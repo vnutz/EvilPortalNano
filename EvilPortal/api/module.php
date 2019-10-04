@@ -530,7 +530,7 @@ class EvilPortal extends Module
     {
         exec("iptables -t nat -I PREROUTING -s {$client} -j ACCEPT");
 //        exec("{$this->BASE_EP_COMMAND} add {$client}");
-        $this->writeFileContents($this->CLIENTS_FILE, "{$client}", true);
+        $this->writeFileContents($this->CLIENTS_FILE, "{$client}\n", true);
     }
 
     /**
